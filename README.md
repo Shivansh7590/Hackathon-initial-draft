@@ -82,7 +82,6 @@ This repo deploys only the Vite frontend to Netlify. The Express API must be hos
    - `VITE_BACKEND_URL=https://your-api-host.com` (no trailing slash)
 3. Trigger **Redeploy** after setting env vars.
 4. On your API host, set server CORS env:
-   - `CLIENT_URL=https://your-netlify-site.netlify.app,http://localhost:5173`
 5. Restart API service after env update.
 
 If `VITE_BACKEND_URL` is missing, the app shows "Production API URL missing" and API calls will not work.
