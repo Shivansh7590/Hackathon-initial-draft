@@ -1,0 +1,33 @@
+/* Sentilyze — global design tokens (used with Tailwind + components.css) */
+:root {
+  --bg: #0b0f1a;
+  --card-bg: #121826;
+  --green: #00ffb2;
+  --red: #ff3b3b;
+  --yellow: #facc15;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --line: rgba(148, 163, 184, 0.12);
+  --glow-green: 0 0 24px rgba(0, 255, 178, 0.25);
+  --glow-red: 0 0 24px rgba(255, 59, 59, 0.2);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar (terminal feel) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 255, 178, 0.35) transparent;
+}

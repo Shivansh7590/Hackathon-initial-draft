@@ -34,20 +34,6 @@ npm run dev
 - App: **http://localhost:5173**  
 - API: **http://localhost:4000**  
 
-### Quick run commands (later)
-
-```bash
-# from repo root
-npm run dev
-```
-
-Optional split terminals:
-
-```bash
-npm run dev --prefix server
-npm run dev --prefix client
-```
-
 Set in **`server/.env`**:
 
 - `ALPHA_VANTAGE_API_KEY` — live intraday prices  
@@ -72,17 +58,3 @@ client/src/
 |----------|-------------|
 | `GET /api/dashboard/:symbol` | Stock series, news, sentiment, recommendation, meter, alerts |
 | `GET /api/trending` | TSLA, AAPL, NVDA, MSFT, GOOGL, META + sentiment each |
-
-## Netlify deployment (frontend) + API host
-
-This repo deploys only the Vite frontend to Netlify. The Express API must be hosted separately (Render/Railway/VM/etc).
-
-1. Deploy this repo to Netlify (build is already configured via `netlify.toml`).
-2. In Netlify Site Settings -> Environment Variables, add:
-   - `VITE_BACKEND_URL=https://your-api-host.com` (no trailing slash)
-3. Trigger **Redeploy** after setting env vars.
-4. On your API host, set server CORS env:
-   - `CLIENT_URL=https://your-netlify-site.netlify.app,http://localhost:5173`
-5. Restart API service after env update.
-
-If `VITE_BACKEND_URL` is missing, the app shows "Production API URL missing" and API calls will not work.

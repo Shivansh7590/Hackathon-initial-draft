@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentilyze Dashboard UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo-dot"></span>
+        <span class="brand-text">Sentilyze</span>
+      </div>
+
+      <nav class="menu">
+        <a class="menu-item active" href="#"><span class="menu-icon">↗</span>Watchlist</a>
+        <a class="menu-item" href="#"><span class="menu-icon">◍</span>Geopolitical</a>
+        <a class="menu-item outlined" href="#"><span class="menu-icon">◔</span>Institutional</a>
+        <a class="menu-item" href="#"><span class="menu-icon">⌁</span>Trending</a>
+      </nav>
+
+      <div class="ai-card">
+        <p class="label">BETA INTELLIGENCE</p>
+        <h4>Simulate Geopolitical Shock</h4>
+        <button>Launch Engine</button>
+      </div>
+
+      <div class="bottom-links">
+        <a href="#">⚙ Settings</a>
+        <a href="#">◌ Support</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search-wrap">
+          <input type="text" placeholder="Search stocks, crypto, or news tags..." />
+        </div>
+        <div class="profile-actions">
+          <button class="icon-btn">◔</button>
+          <button class="icon-btn notify">3</button>
+          <div class="avatar">👤</div>
+        </div>
+      </header>
+
+      <section class="content-grid">
+        <div class="panel watchlist-panel">
+          <div class="panel-header">
+            <h3>Watchlist</h3>
+            <a href="#">View All</a>
+          </div>
+
+          <div class="ticker">
+            <div>
+              <h4>AAPL</h4>
+              <small>Apple Inc.</small>
+            </div>
+            <div class="price-block">
+              <strong>$242.15</strong>
+              <span class="green">+1.42%</span>
+            </div>
+          </div>
+
+          <div class="bars bars-a"></div>
+
+          <div class="ticker">
+            <div>
+              <h4>TSLA</h4>
+              <small>Tesla Motors</small>
+            </div>
+            <div class="price-block">
+              <strong>$184.92</strong>
+              <span class="red">-3.38%</span>
+            </div>
+          </div>
+
+          <div class="bars bars-b"></div>
+
+          <div class="ticker">
+            <div>
+              <h4>BTC</h4>
+              <small>Bitcoin Coin</small>
+            </div>
+            <div class="price-block">
+              <strong>$89,204</strong>
+              <span class="green">+0.85%</span>
+            </div>
+          </div>
+
+          <div class="bars bars-c"></div>
+        </div>
+
+        <div class="hero-head">
+          <div>
+            <h1>Global Market<br />Pulse</h1>
+            <p>March 14, 2026 · 14:32:04 EST</p>
+          </div>
+          <div class="hero-tags">
+            <span class="tag live">LIVE FLOW</span>
+            <span class="tag">USA-IRAN CONTEXT</span>
+          </div>
+        </div>
+
+        <div class="panel chart-panel">
+          <div class="sentiment-top">
+            <div class="meter">
+              <div class="arc"></div>
+              <span class="value">68</span>
+              <small>GREED PHASE</small>
+            </div>
+            <div class="sentiment-cards">
+              <div class="mini">
+                <small>RETAIL SENTIMENT</small>
+                <strong>Bullish <span class="green">+84%</span></strong>
+              </div>
+              <div class="mini">
+                <small>VOLUME SPIKE</small>
+                <strong>2.4x <span>High</span></strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-area">
+            <div class="line line-pink"></div>
+            <div class="line line-purple"></div>
+            <div class="bars-overlay">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="source-tabs">
+            <button class="active">All Sources</button>
+            <button>Reddit</button>
+            <button>News</button>
+          </div>
+
+          <div class="chart-trending">
+            <h4>Trending Signals</h4>
+            <div class="pills">
+              <span>#EnergyCalls</span>
+              <span>#HormuzBlockade</span>
+              <span>#RateHike</span>
+              <span>#XLE_Long</span>
+              <span>#BrentCrude</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel geopolitical-panel">
+          <h3>Geopolitical</h3>
+          <div class="geo-item">
+            <span class="chip danger">CRISIS</span>
+            <p>Strait of Hormuz<br />Naval Deployment<br />Detected</p>
+          </div>
+          <div class="geo-item">
+            <span class="chip safe">ECON</span>
+            <p>FED Rate Decision:<br />25bps Hike<br />Projected</p>
+          </div>
+        </div>
+
+        <div class="panel pulse-panel">
+          <h3>Community Pulse</h3>
+          <div class="pulse-circle-wrap">
+            <div class="pulse-circle"></div>
+            <h4>GREEN PHASE</h4>
+            <p>MARKET RESILIENCE: HIGH</p>
+          </div>
+        </div>
+
+        <div class="panel trends-panel">
+          <h3>Sources Overview</h3>
+          <div class="sources-sections">
+            <article class="source-card">
+              <h4>All Sources</h4>
+              <p>Cross-channel signal blend from social, newswire, and flow tracking.</p>
+            </article>
+            <article class="source-card">
+              <h4>Reddit</h4>
+              <p>Community discussions remain focused on energy names and macro hedges.</p>
+            </article>
+            <article class="source-card">
+              <h4>News</h4>
+              <p>Headlines continue to emphasize geopolitical risk and volatility pressure.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel insight-panel">
+          <h3>AI Momentum Insight</h3>
+          <p>
+            Current sentiment flow suggests a rotation from high-beta names into
+            resilient sectors over the next 48 hours.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

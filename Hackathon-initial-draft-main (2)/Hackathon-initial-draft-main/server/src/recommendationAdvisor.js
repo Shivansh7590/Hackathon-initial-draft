@@ -103,7 +103,7 @@ async function callAdvisorModel(prompt, temperature = 0.15, maxTokens = 450) {
         "HTTP-Referer": process.env.OPENROUTER_HTTP_REFERER || "http://localhost:5173",
         "X-Title": "Sentilyze Advisor"
       },
-      timeout: 12000
+      timeout: 35000
     }
   );
   return String(data?.choices?.[0]?.message?.content || "").trim();

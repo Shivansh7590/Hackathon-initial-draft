@@ -1,0 +1,19 @@
+# Netlify: build the Vite app in /client (not Next.js).
+# If the site was created as "Next.js", Netlify injects @netlify/plugin-nextjs and
+# expects .next/ output — this project is Vite + React, so skip that plugin.
+[build]
+  command = "npm install --prefix client && npm run build --prefix client"
+  publish = "client/dist"
+
+# Required for a working site (Netlify UI → Environment variables → Build, then redeploy):
+#   VITE_BACKEND_URL=https://your-api.onrender.com
+# On the API server set CLIENT_URL=https://your-site.netlify.app,http://localhost:5173
+[build.environment]
+  NODE_VERSION = "20"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# SPA: all routes serve the React shell (optional; safe for client-side UI).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

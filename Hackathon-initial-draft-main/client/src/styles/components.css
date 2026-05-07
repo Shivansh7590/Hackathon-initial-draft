@@ -1,0 +1,29 @@
+/* Sentilyze — layered effects (beyond Tailwind utilities) */
+
+@layer components {
+  .sentilyze-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .sentilyze-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 255, 178, 0.12);
+  }
+
+  .ai-glow {
+    box-shadow: var(--glow-green), 0 0 0 1px rgba(0, 255, 178, 0.2);
+    background: linear-gradient(135deg, rgba(0, 255, 178, 0.08), rgba(18, 24, 38, 0.95));
+  }
+
+  .gradient-fear-greed {
+    background: linear-gradient(90deg, #ff3b3b 0%, #facc15 50%, #00ffb2 100%);
+  }
+
+  .gradient-mask {
+    mask-image: linear-gradient(90deg, #000 0%, #000 100%);
+  }
+}

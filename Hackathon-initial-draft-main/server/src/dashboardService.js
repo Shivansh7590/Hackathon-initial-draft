@@ -99,16 +99,13 @@ export async function buildDashboardBundle(symbol) {
 
   const sentiment = generateSentimentScore(news);
   const ruleRecommendation = buildRecommendation(sentiment.sentimentScore, sentiment, news);
-  const recommendation = await Promise.race([
-    buildModelRecommendation({
-      symbol: sym,
-      stock,
-      sentiment,
-      news,
-      ruleRecommendation
-    }),
-    new Promise((resolve) => setTimeout(() => resolve({ ...ruleRecommendation, source: "rules" }), 9500))
-  ]);
+  const recommendation = await buildModelRecommendation({
+    symbol: sym,
+    stock,
+    sentiment,
+    news,
+    ruleRecommendation
+  });
   const effectiveSentimentScore = Number(recommendation?.sentimentScore ?? sentiment.sentimentScore);
 
   const newsEnriched = news.map((article, i) => {
